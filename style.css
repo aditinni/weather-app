@@ -1,0 +1,158 @@
+body {
+    font-family: 'Playfair', serif;
+    background: url("https://images.pexels.com/photos/125510/pexels-photo-125510.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    
+    
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    transition: height 0.5s ease-in-out;
+    
+}
+.container.expanded {
+    height: 800px; /* Change this value as needed */
+}
+h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: rgb(35, 8, 109);
+    font-family: 'Playfair', serif;
+    text-shadow: 2px 2px 10px black;
+}
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 80%;
+    margin-right: 10px;
+}
+button {
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    border-radius: 24px;
+    position: relative;
+    right:65px;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: 26px;  
+
+}
+.search input{
+    flex: 0.2;
+    border-radius: 24px;
+    width: 200px;
+    transition: all 0.5s;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+
+}
+.search input:focus{
+    outline: none;
+    flex: 1;
+    transition: all 0.5s;
+    outline: none;
+}
+p {
+color: white;
+font-size:24px;
+}
+p img{
+width: 30px;
+position: relative;
+top: 5px;
+left: 10px;
+}
+.weather-icon {
+    width: 100px; /* Adjust the desired width */
+    height: auto; /* Automatically adjust the height while maintaining aspect ratio */
+}
+.wind{
+    position: relative;
+    top: 10px;
+    left: 10px;
+}
+.details{
+    font-size: 20px;
+    color: white;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+}
+.img{
+    width: 200px;
+    height:200px;
+    position: relative;
+    left: 200px;
+    bottom: 40px;
+    animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    background-image: url("clear.png");
+    background-repeat: no-repeat;
+}
+@keyframes change{
+    0%{
+        background: url("clear.png");
+    
+    }
+    20%{
+        background: url("clouds.png");
+    }
+    40%{
+        background: url("drizzle.png");
+    }
+    60%{
+        background: url("mist.png");
+    }
+    80%{
+        background: url("rain.png");
+    }
+}
+@media screen and (max-width: 376px){
+    body{
+            height: 800px;
+    }
+
+    .img{
+        width: 200px;
+    height:200px;
+    position: relative;
+    left: 45px;
+    bottom: 40px;
+    animation-name: change;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    background-image: url("clear.png");
+    background-repeat: no-repeat;
+    }
+}
+
+
